@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import './Issues.css'
+import './Issues.css';
 import { Card, Feed, List, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 import Issue from '../Issue/Issue.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import Issue from '../Issue/Issue';
 import { retrieveIssues } from '../../actions/issueActions';
 import './Issues.css';
 
@@ -29,18 +28,18 @@ export class Issues extends Component {
             <Card.Header className="ui center aligned">
               Git Issues
             </Card.Header>
-              <Feed>
-                <Segment>
-                  <Dimmer active inverted>
-                    <Loader inverted>Loading</Loader>
-                  </Dimmer>
+            <Feed>
+              <Segment>
+                <Dimmer active inverted>
+                  <Loader inverted>Loading</Loader>
+                </Dimmer>
 
-                  <Image src='/assets/images/wireframe/short-paragraph.png' />
-                </Segment>
-              </Feed>
-      </Card.Content>
-    </Card>
-      )
+                <Image src="/assets/images/wireframe/short-paragraph.png" />
+              </Segment>
+            </Feed>
+          </Card.Content>
+        </Card>
+      );
     }
     return (
       <Card>
@@ -68,12 +67,10 @@ Issues.propTypes = {
 };
 
 
-export const mapStateToProps = state => {
-    return {
-      issuesIds: state.issues.ids,
-      loadingIssues: state.issues.loadingIssues
-    }
-}
+export const mapStateToProps = state => ({
+  issuesIds: state.issues.ids,
+  loadingIssues: state.issues.loadingIssues,
+});
 
 
 export const mapDispatchToProps = dispatch => bindActionCreators({
