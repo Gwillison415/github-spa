@@ -67,19 +67,14 @@ Issues.propTypes = {
   loadingIssues: PropTypes.bool.isRequired,
 };
 
-<<<<<<< HEAD
+
 export const mapStateToProps = state => {
     return {
       issuesIds: state.issues.ids,
       loadingIssues: state.issues.loadingIssues
     }
 }
-=======
-export const mapStateToProps = state => ({
-  issuesIds: state.issues.ids,
-  loadingIssues: state.loadingIssues,
-});
->>>>>>> b17231130f68b248fc112efab4fddb307141f007
+
 
 export const mapDispatchToProps = dispatch => bindActionCreators({
   retrieveIssues,
