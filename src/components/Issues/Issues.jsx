@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Issues.css'
-import { Card, Feed, List } from 'semantic-ui-react';
+import { Card, Feed, List, Dimmer, Loader, Image, Segment } from 'semantic-ui-react';
 import Issue from '../Issue/Issue.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -19,9 +19,25 @@ export class Issues extends Component{
   }
 
   render() {
+    console.log('this.props.loadingIssues', this.props);
     if (this.props.loadingIssues) {
       return (
-        <div>Loading Issues</div>
+        <Card>
+          <Card.Content>
+            <Card.Header className="ui center aligned">
+              Git Issues
+            </Card.Header>
+              <Feed>
+                <Segment>
+                  <Dimmer active inverted>
+                    <Loader inverted>Loading</Loader>
+                  </Dimmer>
+
+                  <Image src='/assets/images/wireframe/short-paragraph.png' />
+                </Segment>
+              </Feed>
+      </Card.Content>
+    </Card>
       )
     }
     return (
@@ -46,7 +62,7 @@ export class Issues extends Component{
 export const mapStateToProps = state => {
     return {
       issuesIds: state.issues.ids,
-      loadingIssues: state.loadingIssues
+      loadingIssues: state.issues.loadingIssues
     }
 }
 
