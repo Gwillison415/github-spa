@@ -4,18 +4,20 @@ import { Card, Feed, List, Dimmer, Loader, Image, Segment } from 'semantic-ui-re
 import Issue from '../Issue/Issue.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {retrieveIssues} from '../../actions/issueActions';
+import PropTypes from 'prop-types';
+import Issue from '../Issue/Issue';
+import { retrieveIssues } from '../../actions/issueActions';
+import './Issues.css';
 
-export class Issues extends Component{
-
-  componentDidMount(){
+export class Issues extends Component {
+  componentDidMount() {
     this.props.retrieveIssues();
   }
 
-  issueComponents = (issueIds) => {
-    return issueIds.map(id => (
-        <Issue key={id} issueId={id} />
-    ))
+  issueComponents(issuesIds) {
+    return issuesIds.sort((a, b) => a - b).map(id => (
+      <Issue key={id} issueId={id} />
+    ));
   }
 
   render() {
@@ -55,22 +57,35 @@ export class Issues extends Component{
           </Feed>
         </Card.Content>
       </Card>
-    )
+    );
   }
+}
+
+Issues.propTypes = {
+  retrieveIssues: PropTypes.func.isRequired,
+  issuesIds: PropTypes.number.isRequired,
+  loadingIssues: PropTypes.bool.isRequired,
 };
 
+<<<<<<< HEAD
 export const mapStateToProps = state => {
     return {
       issuesIds: state.issues.ids,
       loadingIssues: state.issues.loadingIssues
     }
 }
+=======
+export const mapStateToProps = state => ({
+  issuesIds: state.issues.ids,
+  loadingIssues: state.loadingIssues,
+});
+>>>>>>> b17231130f68b248fc112efab4fddb307141f007
 
-export const mapDispatchToProps = dispatch => bindActionCreators ({
-  retrieveIssues
+export const mapDispatchToProps = dispatch => bindActionCreators({
+  retrieveIssues,
 }, dispatch);
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(Issues);

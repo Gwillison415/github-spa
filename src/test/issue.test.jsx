@@ -16,7 +16,7 @@ const state = {
       }
     },}
 
-}
+};
 
 describe('Issue entry component', () => {
   it('should render a component with props as specified ', () => {
@@ -45,5 +45,5 @@ describe('Issue entry component', () => {
       labels={state.issues.issuesById[238923429].labels}/>,
     );
     expect(component.find('.aligned').exists()).toBe(true);
-  })
+  });
 });
