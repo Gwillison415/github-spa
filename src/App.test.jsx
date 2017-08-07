@@ -1,8 +1,8 @@
 import React from 'react';
 import toJson, { shallowToJson } from 'enzyme-to-json';
 import { shallow, render, mount } from 'enzyme';
+import { Provider } from 'react-redux';
 import App from './App.jsx';
-
 
 describe('App component', () => {
   it('should render a component with props as specified ', () => {
