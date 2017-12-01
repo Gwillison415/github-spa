@@ -1,8 +1,8 @@
 /* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
 import { Card } from 'semantic-ui-react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
 import PropTypes from 'prop-types';
 import { retrieveMilestones } from '../../actions/milestonesActions';
 import Milestone from '../Milestone/Milestone';
