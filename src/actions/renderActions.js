@@ -12,6 +12,12 @@ export const displayOrgs = userName => (dispatch) => {
   });
 };
 
+export const displayLogin = () => (dispatch) => {
+  dispatch({
+    type: DISPLAY_LOGIN,
+  });
+};
+
 export const displayRepos = selectedOrgName => (dispatch) => {
   dispatch({
     type: DISPLAY_REPOS,
@@ -24,6 +30,11 @@ export const displayDashboard = repoName => (dispatch) => {
     type: DISPLAY_DASHBOARD,
     repoName,
   });
+export const logout = () => {
+  {
+    type: LOGOUT
+  }
+}
 };
 export const logout = () => ({
   type: LOGOUT,

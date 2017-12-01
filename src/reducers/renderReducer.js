@@ -1,6 +1,12 @@
 
-import { DISPLAY_ORGS, DISPLAY_REPOS, DISPLAY_LOGIN, DISPLAY_DASHBOARD, LOGOUT,
+import { DISPLAY_ORGS, DISPLAY_REPOS, DISPLAY_LOGIN, DISPLAY_DASHBOARD, LOGOUT
 } from '../actions/renderActions';
+const initialState = {
+  render: 'login',
+  repoName: null,
+  userName: '',
+  selectedOrgName: null
+}
 
 const initialState = {
   render: 'login',

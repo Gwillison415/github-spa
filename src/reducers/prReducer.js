@@ -1,4 +1,4 @@
-import { GET_PRS, LOADING_PRS } from '../actions/prActions';
+import {  GET_PRS, LOADING_PRS } from '../actions/prActions';
 import { LOGOUT } from '../actions/renderActions';
 
 function createState(json, incomingState, repoName) {
@@ -19,11 +19,11 @@ function createState(json, incomingState, repoName) {
   return { ...state, loadingPrTable: false };
 }
 const initialState = {
-  ids: [],
-  prsById: {},
-  loadingPrTable: true,
-  repoName: '',
-};
+   ids: [],
+   prsById: {},
+   loadingPrTable: true,
+    repoName: ''
+  }
 const prReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_PRS:

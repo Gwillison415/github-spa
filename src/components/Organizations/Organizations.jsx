@@ -44,6 +44,10 @@ export class Organizations extends Component {
 Organizations.propTypes = {
   retrieveOrgs: PropTypes.func.isRequired,
   orgIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+<<<<<<< HEAD
+=======
+  displayLogin: PropTypes.func.isRequired,
+>>>>>>> 0c947efc005bf11bf9326d4be2f9d8c5a7b80045
   userName: PropTypes.string.isRequired,
 };
 
@@ -68,6 +72,10 @@ export const mapStateToProps = (state, ownProps) => {
 export const mapDispatchToProps = dispatch =>
   bindActionCreators({
     retrieveOrgs,
+<<<<<<< HEAD
+=======
+    displayLogin,
+>>>>>>> 0c947efc005bf11bf9326d4be2f9d8c5a7b80045
   }, dispatch);
 
 export default injectWidgetId(connect(mapStateToProps, mapDispatchToProps)(Organizations));
