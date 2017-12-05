@@ -8,7 +8,7 @@ import './Logout.css';
 import { logout } from '../../actions/renderActions';
 /* eslint-disable no-shadow */
 export const triggerLogout = (logout) => {
-  cookie.remove('githubUserName');
+  cookie.remove('userName');
   cookie.remove('githubAccessToken');
   logout();
 };

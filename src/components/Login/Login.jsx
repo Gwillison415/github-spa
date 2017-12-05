@@ -11,8 +11,8 @@ import './Login.css';
 
 export class Login extends Component {
   componentDidMount() {
-    if (cookie.load('githubUserName') !== undefined) {
-      const name = cookie.load('githubUserName');
+    if (cookie.load('userName') !== undefined) {
+      const name = cookie.load('userName');
       this.props.displayOrgs(name);
     }
   }

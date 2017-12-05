@@ -12,11 +12,19 @@ export const displayOrgs = userName => (dispatch) => {
   });
 };
 
+<<<<<<< HEAD
 export const displayLogin = () => (dispatch) => {
   dispatch({
     type: DISPLAY_LOGIN,
   });
 };
+=======
+// export const displayLogin = () => (dispatch) => {
+//   dispatch({
+//     type: DISPLAY_LOGIN,
+//   });
+// };
+>>>>>>> parent of 8b808c7... Update cookie assignment to avoid namespace collisions across microservices (#30)
 
 export const displayRepos = selectedOrgName => (dispatch) => {
   dispatch({
