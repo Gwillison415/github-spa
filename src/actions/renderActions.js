@@ -12,19 +12,6 @@ export const displayOrgs = userName => (dispatch) => {
   });
 };
 
-<<<<<<< HEAD
-export const displayLogin = () => (dispatch) => {
-  dispatch({
-    type: DISPLAY_LOGIN,
-  });
-};
-=======
-// export const displayLogin = () => (dispatch) => {
-//   dispatch({
-//     type: DISPLAY_LOGIN,
-//   });
-// };
->>>>>>> parent of 8b808c7... Update cookie assignment to avoid namespace collisions across microservices (#30)
 
 export const displayRepos = selectedOrgName => (dispatch) => {
   dispatch({
@@ -38,12 +25,12 @@ export const displayDashboard = repoName => (dispatch) => {
     type: DISPLAY_DASHBOARD,
     repoName,
   });
+};
 export const logout = () => {
   {
     type: LOGOUT
   }
 }
-};
-export const logout = () => ({
-  type: LOGOUT,
-});
+// export const logout = () => ({
+//   type: LOGOUT,
+// });

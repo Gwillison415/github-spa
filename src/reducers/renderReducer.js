@@ -8,12 +8,6 @@ const initialState = {
   selectedOrgName: null
 }
 
-const initialState = {
-  render: 'login',
-  repoName: null,
-  userName: '',
-  selectedOrgName: null,
-};
 
 const renderPage = (state = initialState, action) => {
   switch (action.type) {
