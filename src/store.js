@@ -1,7 +1,7 @@
 /* eslint-disable max-len, no-unused-vars */
 import { createStore, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-
+import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers/index';
 import GITHUB_API from './utils/Api';
 
@@ -9,7 +9,7 @@ import GITHUB_API from './utils/Api';
  /* eslint-disable no-underscore-dangle */
 const store = createStore(
   rootReducer,
-  applyMiddleware(thunkMiddleware.withExtraArgument({ GITHUB_API })),
+  composeWithDevTools(applyMiddleware(thunkMiddleware.withExtraArgument({ GITHUB_API }))),
 
 );
 store.subscribe(() => {

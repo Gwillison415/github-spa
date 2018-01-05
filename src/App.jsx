@@ -46,7 +46,7 @@ App.childContextTypes = {
 export const mapStateToProps = (state, ownProps) => {
   const id = ownProps.widgetId;
   const currentPage = state.widgets.byId[id].currentPage.render;
-
+  console.log(currentPage);
   return {
     currentPage,
   };

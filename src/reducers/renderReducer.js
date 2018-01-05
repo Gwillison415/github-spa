@@ -1,13 +1,14 @@
 
 import { DISPLAY_ORGS, DISPLAY_REPOS, DISPLAY_LOGIN, DISPLAY_DASHBOARD, LOGOUT
 } from '../actions/renderActions';
+
+
 const initialState = {
   render: 'login',
   repoName: null,
   userName: '',
-  selectedOrgName: null
-}
-
+  selectedOrgName: null,
+};
 
 const renderPage = (state = initialState, action) => {
   switch (action.type) {
